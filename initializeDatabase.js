@@ -5,6 +5,7 @@ const axios = require('axios');
 // Connect to the SQLite database
 const db = new sqlite3.Database('database.db');
 
+
 // URL of the JSON data
 const url = 'https://s3.amazonaws.com/roxiler.com/product_transaction.json';
 

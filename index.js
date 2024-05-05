@@ -5,9 +5,6 @@ module.exports = app;
 
 app.use(cors());
 
-
-
-
 app.use(express.json());
 let sqlite = require("sqlite");
 let sqlite3 = require("sqlite3");
