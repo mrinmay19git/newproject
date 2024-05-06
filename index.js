@@ -19,8 +19,8 @@ let intializeDBAndServer = async () => {
     filename: dbpath,
     driver: sqlite3.Database,
   });
-  app.listen(6000, () => {
-    console.log("Server Started at http://localhost:6000/");
+  app.listen(3079, () => {
+    console.log("Server Started at http://localhost:3079/");
   });
 };
 intializeDBAndServer();
@@ -36,11 +36,11 @@ intializeDBAndServer();
 //   - Default pagination values will be like page = 1, per page = 10
 // API to list all transactions with search and pagination
 
-//http://localhost:3000/transactions?page=1$perPage=10&search=''
+//http://localhost:3079/transactions?page=1$perPage=10&search=''
 
 // API to list all transactions with search and pagination
 
-//http://localhost:3000/transactions?page=1$perPage=10&search=''
+//http://localhost:3079/transactions?page=1$perPage=10&search=''
 
 app.get('/', async (req, res) => {
     try {
@@ -113,7 +113,7 @@ app.get('/transactions', async (req, res) => {
 // - Total number of sold items of selected month
 // - Total number of not sold items of selected month
 
-//http://localhost:3000/statistics?month=january
+//http://localhost:3079/statistics?month=january
 app.get('/statistics', async (req, res) => {
     try {
         console.log('Request received for /statistics');
@@ -190,7 +190,7 @@ app.get('/statistics', async (req, res) => {
 // - 801-900
 // - 901-above
 
-//http://localhost:3000/bar-chart?month=january
+//http://localhost:3079/bar-chart?month=january
 app.get('/bar-chart', async (req, res) => {
     try {
         const selectedMonth = req.query.month || 'march';
@@ -257,7 +257,7 @@ app.get('/bar-chart', async (req, res) => {
 // - Y category : 5 (items)
 // - Z category : 3 (items)
 
-//http://localhost:3000/pie-chart?month=january
+//http://localhost:3079/pie-chart?month=january
 app.get('/pie-chart', async (req, res) => {
     try {
         const selectedMonth = req.query.month || 'march';
